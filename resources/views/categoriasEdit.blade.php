@@ -53,13 +53,13 @@
 
                                 <div class="form-group header-group-0 col-sm-12" id="form-group-identificacion" style="">
                                     <label class="control-label col-sm-3">
-                                        Nombre
+                                        Nombre:
                                         <span class="text-danger" title="Este campo es requerido">*</span>
                                     </label>
 
                                     <div class="col-sm-8">
-                                        <input type="text" title="Nombre" required="" placeholder="Ingrese el nombre de la categorias" minlength="" class="form-control" name="nombre" id="nombre" value="" >
-                                        <h5>Ej. Avatar</h5>
+                                        <input type="text" title="Nombre" required=""  sminlength="" class="form-control" name="nombre" id="nombre" value="{{$row->Nombre}}" >
+                                        <h6>Ej. Snack</h6>
                                         <div class="text-danger"></div>
                                         <p class="help-block"></p>
 

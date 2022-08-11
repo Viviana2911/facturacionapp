@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>super</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
     </head>
     <body class="anti" align="center">
         <div align="cemter" >
-            <a href="{{url('admin/login')}}"><img src="thumbnail_Don_cando.jpg"></a>
+            <a href="{{url('admin/login')}}"><img src="thumbnail_Don_Cando.jpg"></a>
         </div>
     </body>
 </html>

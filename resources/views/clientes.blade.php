@@ -6,6 +6,8 @@
 
 @section('content')
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
 
         var buscar_cliente_url = "{{ url('clientes/buscar?texto=') }}";
@@ -123,7 +125,7 @@
                                         <span class="text-danger" title="Este campo es requerido">*</span>
                                     </label>
                                     <div class="col-sm-8">
-                                        <textarea name="direccion" id="direccion" required="" maxlength="255" class="form-control" rows="5"></textarea>
+                                        <textarea name="direccion" id="direccion" required="" maxlength="255"  class="form-control" rows="5"></textarea>
                                         <div class="text-danger"></div>
                                         <p class="help-block"></p>
                                     </div>
@@ -167,5 +169,50 @@
 
         </div>
     </div><!--END AUTO MARGIN-->
+
+    <script type="text/javascript">
+    $("#formNuevoComprobante").validate({
+
+        rules:{
+        
+          tipo:{
+            required:true
+          },
+          identificacion2:{
+            required:true
+          },
+          nombres:{
+            required:true
+          },
+          correo:{
+            required:true
+          },
+          telefono:{
+            required:true
+          }
+        },
+        messages:{
+          
+          tipo:{
+            required:"Ingrese el  tipo porfavor"
+          },
+          identificacion2:{
+            required:"Ingrese la identificación porfavor"
+          },
+          nombres:{
+            required:"Ingrese el nombre porfavor"
+          },
+          correo:{
+            required:"Ingrese el correo porfavor"
+          },
+          telefono:{
+            required:"Ingrese el correo porfavor"
+          }
+
+        }
+      });
+
+        </script>
+
 
 @endsection

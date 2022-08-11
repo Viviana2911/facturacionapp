@@ -6,6 +6,8 @@
 
 @section('content')
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
 
         var buscar_cliente_url = "{{ url('clientes/buscar?texto=') }}";
@@ -193,7 +195,7 @@
                             </label>
 
                             <div class="col-sm-2">
-                                <input type="text" title="Teléfono" required="" class="form-control" name="telefono" id="telefono" value="{{$cliente ? $cliente->telefono : $consumidor_final->telefono}}" {{$cliente ? '' : 'readonly'}}>
+                                <input type="text" title="Teléfono" required=""  class="form-control" name="telefono" id="telefono" value="{{$cliente ? $cliente->telefono : $consumidor_final->telefono}}" {{$cliente ? '' : 'readonly'}}>
                             </div>
 
                             <label class="control-label col-sm-1">Correo
@@ -636,4 +638,25 @@
         </div>
     </div>
 
+
+
+    <script type="text/javascript">
+    $("#formNuevoCliente").validate({
+
+        rules:{
+        
+          nombres:{
+            required:true
+          }
+        },
+        messages:{
+          
+          nombres:{
+            required:"Ingrese el  nombre"
+          }
+
+        }
+      });
+
+        </script>
 @endsection

@@ -293,8 +293,10 @@
 	    |
 	    */
 	    public function hook_before_edit(&$postdata,$id) {
-	        //Your code here
 
+	        //Your code here
+		
+			
 	    }
 
 	    /*
@@ -304,9 +306,19 @@
 	    | @id       = current id
 	    |
 	    */
-	    public function hook_after_edit($id) {
+	    public function getEdit($id) {
 	        //Your code here
+			$this->cbLoader();
+            if (! CRUDBooster::isCreate() && $this->global_privilege == false || $this->button_add == false) {
+                CRUDBooster::insertLog(cbLang('log_try_add', ['module' => CRUDBooster::getCurrentModule()->name]));
+                CRUDBooster::redirect(CRUDBooster::adminPath(), cbLang("denied_access"));
+            }
 
+            $page_title = cbLang("edit_data_page_title", ['module' => CRUDBooster::getCurrentModule()->name]);
+            $page_menu = Route::getCurrentRoute()->getActionName();
+            $command = 'edit';
+
+            return view('categoriasEdit', compact('page_title', 'page_menu', 'command'));
 	    }
 
 	    /*
