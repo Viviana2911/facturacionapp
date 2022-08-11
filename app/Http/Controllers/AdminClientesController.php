@@ -56,7 +56,7 @@
 			$this->form[] = ['label'=>'Identificación','name'=>'identificacion','type'=>'text','validation'=>'required|min:1|max:255|unique:clientes','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Nombres','name'=>'nombres','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Correo','name'=>'correo','type'=>'email','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Teléfono','name'=>'telefono','type'=>'number','validation'=>'required|min:1','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Teléfono','name'=>'telefono','type'=>'number','validation'=>'required|min:10','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Dirección','name'=>'direccion','type'=>'textarea','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 

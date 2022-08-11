@@ -2,12 +2,16 @@
 
 
 
-
-
 @section('content')
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<<<<<<< Updated upstream
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+=======
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js">
+</script>
+
+>>>>>>> Stashed changes
     <script type="text/javascript">
 
         var buscar_cliente_url = "{{ url('clientes/buscar?texto=') }}";
@@ -70,11 +74,17 @@
                                     <label class="control-label col-sm-3">
                                         Identificación
                                         <span class="text-danger" title="Este campo es requerido">*</span>
+                                       
                                     </label>
 
                                     <div class="col-sm-8">
+<<<<<<< Updated upstream
                                         <input type="text" title="Identificación" required="" minlength="10" class="form-control" name="identificacion2" id="identificacion2" value="" onKeyPress="return soloNumeros(event)" >
 
+=======
+                                        <input type="text" title="Identificación" required="" placeholder="Ingrese la identificación" maxlength="255" class="form-control" name="identificacion2" id="identificacion2" value="" onKeyPress="return soloNumeros(event)" >
+                                        <h6>Ej. 055021572789</h6>
+>>>>>>> Stashed changes
                                         <div class="text-danger"></div>
                                         <p class="help-block"></p>
 
@@ -87,8 +97,8 @@
                                     </label>
 
                                     <div class="col-sm-8">
-                                        <input type="text" title="Nombres" required="" maxlength="255" class="form-control" name="nombres" id="nombres" value="">
-
+                                        <input type="text" title="Nombres" required="" placeholder="Ingrese el nombre" maxlength="255" class="form-control" name="nombres" id="nombres" value="">
+                                        <h6>Ej. Jonathan</h6>
                                         <div class="text-danger"></div>
                                         <p class="help-block"></p>
 
@@ -103,8 +113,10 @@
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                                             <input type="email" name="correo" style="display: none">
-                                            <input type="email" title="Correo" required="" maxlength="255" class="form-control" name="correo" id="correo" value="">
+                                            <input type="email" title="Correo" required="" placeholder="Ingrese el correo" maxlength="255" class="form-control" name="correo" id="correo" value="">
+                                            
                                         </div>
+                                        <h6>Ej. onaj@gmail.com</h6>
                                         <div class="text-danger"></div>
                                         <p class="help-block"></p>
                                     </div>
@@ -115,7 +127,13 @@
                                     </label>
 
                                     <div class="col-sm-8">
+<<<<<<< Updated upstream
                                         <input type="number" step="1" title="Teléfono" required="" minlength="2" class="form-control" name="telefono" id="telefono" value="">
+=======
+                                        <input type="number" step="1" title="Teléfono" required="" placeholder="Ingrese el telefono" min="1" class="form-control" name="telefono" id="telefono" value="">
+                                        
+                                        <h6>Ej. 0995718809</h6>
+>>>>>>> Stashed changes
                                         <div class="text-danger"></div>
                                         <p class="help-block"></p>
                                     </div>
@@ -125,7 +143,12 @@
                                         <span class="text-danger" title="Este campo es requerido">*</span>
                                     </label>
                                     <div class="col-sm-8">
+<<<<<<< Updated upstream
                                         <textarea name="direccion" id="direccion" required="" maxlength="255"  class="form-control" rows="5"></textarea>
+=======
+                                        <textarea name="direccion" id="direccion" required="" placeholder="Ingrese la dirección" maxlength="255" class="form-control" rows="5"></textarea>
+                                        <h6>Ej. Toacaso</h6> 
+>>>>>>> Stashed changes
                                         <div class="text-danger"></div>
                                         <p class="help-block"></p>
                                     </div>
@@ -170,6 +193,7 @@
         </div>
     </div><!--END AUTO MARGIN-->
 
+<<<<<<< Updated upstream
     <script type="text/javascript">
     $("#formNuevoComprobante").validate({
 
@@ -216,3 +240,7 @@
 
 
 @endsection
+=======
+
+        @endsection
+>>>>>>> Stashed changes
